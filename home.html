@@ -7,10 +7,12 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+  <script src="main.js" defer></script>
   <title>Youtube UI</title>
 </head>
 <body>
-  <nav class="header">
+  <!-- header -->
+  <header class="header">
     <div class="logo">
       <i class="fab fa-youtube"></i>
       <a href="">Youtube</a>
@@ -19,76 +21,101 @@
       <li><a href="#"><i class="fas fa-search"></i></a></li>
       <li><a href="#"><i class="fas fa-ellipsis-v"></i></a></li>
     </ul>
-  </nav>
+  </header>
 
-  <video controls width="100%">
-    <source src="https://www.youtube.com/watch?v=67stn7Pu7s4&feature=youtu.be" type="video/webm">
-  </video>
+  <!-- video player -->
+  <section class="player">
+    <video controls width=100% src="https://www.youtube.com/watch?v=67stn7Pu7s4&feature=youtu.be"></video>
+  </section>
+  
   <div class="change_part">
-    <div class="video_description">
-      <p class="hash_tag">#TEST 1, #TEST2</p>
-      <div class=title_caret_wrap>
-        <div class="video_title">
-          Video Title Test Video Title Test Video Title Test Video Title Test Video Title Test
+    <!-- video info -->
+    <section class="info">
+      <!-- meta data-->
+      <div class="metadata">
+        <ul class="hashtag">
+          <li>#TEST 1</li>
+          <li>#TEST 2</li>
+        </ul>
+        <div class="titleAndButton">
+          <span class="video_title clamp">
+            Video Title Test Video Title Test Video Title Test Video Title Test Video Title Test
+            If the title shown in the current state is more than two lines, some of these titles will be hidden.
+          </span>
+          <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
         </div>
-        <a href="#"><i class="fas fa-caret-down"></i></a>
+        <span class="views">1M views, 1 month age</span>
       </div>
-      <p class="video_data">1M views, 1 month age</p>
-      <ul class="video_icons">
-        <li><a href="#"><i class="fas fa-thumbs-up"></i></a></li>
-        <li><a href="#"><i class="fas fa-thumbs-down"></i></a></li>
-        <li><a href="#"><i class="fas fa-share"></i></a></li>
-        <li><a href="#"><i class="fas fa-plus"></i></a></li>
-        <li><a href="#"><i class="fas fa-flag"></i></a></li>
+
+      <!-- actions -->
+      <ul class="actions">
+        <li><button><i class="fas fa-thumbs-up"></i>79</button></li>
+        <li><button><i class="fas fa-thumbs-down"></i>0</button></li>
+        <li><button><i class="fas fa-share"></i>Share</button></li>
+        <li><button><i class="fas fa-plus"></i>Save</button></li>
+        <li><button><i class="fas fa-flag"></i>Report</button></li>
       </ul>
-      <div class="uploader">
-        <div class="uploader_profile">
+      
+      <!-- channal description-->
+      <div class="channal">
+        <div class="info">
           <i class="fas fa-user-alt"></i>
           <div class="uploader_inform">
             <p class="uploader_name">부분이</p>
             <p class="uploader_subscriber">1M subscriber</p>
           </div>
         </div>
-        <button class="subcribe_buttom">SUBSCRIBE</button>
+        <button class="subcribe_button">SUBSCRIBE</button>
       </div>
-    </div>
+    </section>
+    
+    <!-- next video list -->
+    <section class="upNext">
+      <span class="next">Up next</span>
+      <ul>
+        <li class="item"> 
+          <div class="img">
+            <img src="4865544.jpg" alt="">
+          </div>          
+          <div class="info">
+            <span class="title">video 1 title video 1 title video 1 title video 1 title
+              If the title shown in the current state is more than two lines, some of these titles will be hidden.
+            </span>
+            <span class="name">부분이</span>
+            <span class="views">1M viewers</span>
+          </div>
+          <button><i class="fas fa-ellipsis-v"></i></button>
+        </li>
   
-    <div class="video_list">
-      <p class="next">Up next</p>
-      <div class="video1"> 
-        <img src="4865544.jpg" alt="">
-        <div class="video1_information">
-          <div class="wrap1">
-            <div class="video1_title">video 1 title video 1 title video 1 title video 1 title</div>
-            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+        <li class="item"> 
+          <div class="img">
+            <img src="4865544.jpg" alt="">
+          </div> 
+          <div class="info">
+            <span class="title">video 2 title video 2 title video 2 title video 2 title
+              If the title shown in the current state is more than two lines, some of these titles will be hidden.
+            </span>
+            <span class="name">부분이</span>
+            <span class="views">2M viewers</span>
           </div>
-          <p class=video1_uploader>부분이</p>
-          <p class="video1_viewer">1M viewers</p>
-        </div>
-      </div>
-      <div class="video2"> 
-        <img src="4865544.jpg" alt="">
-        <div class="video2_information">
-          <div class="wrap2">
-            <div class="video2_title">video 2 title video 2 title video 2 title video 2 title</div>
-            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+          <button><i class="fas fa-ellipsis-v"></i></button>
+        </li>
+
+        <li class="item"> 
+          <div class="img">
+            <img src="4865544.jpg" alt="">
+          </div> 
+          <div class="info">
+            <span class="title">video 3 title video 3 title video 3 title video 3 title
+              If the title shown in the current state is more than two lines, some of these titles will be hidden.
+            </span>
+            <span class="name">부분이</span>
+            <span class="views">3M viewers</span>
           </div>
-          <p class=video2_uploader>부분이</p>
-          <p class="video2_viewer">2M viewers</p>
-        </div>
-      </div>
-      <div class="video3"> 
-        <img src="4865544.jpg" alt="">
-        <div class="video3_information">
-          <div class="wrap3">
-            <div class="video3_title">video 3 title video 3 title video 3 title video 3 title</div>
-            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-          </div>
-          <p class=video3_uploader>부분이</p>
-          <p class="video3_viewer">3M viewers</p>
-        </div>
-      </div>
-    </div>
+          <button><i class="fas fa-ellipsis-v"></i></button>
+        </li>
+      </ul>
+    </section>
   </div>
 </body>
 </html>
